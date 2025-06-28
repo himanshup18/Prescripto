@@ -16,9 +16,13 @@ connectCloudinary();
 // middlewares
 app.use(express.json());
 app.use(cors({
-  origin: "https://prescripto-ivory.vercel.app", // Replace with your actual frontend URL
+  origin: [
+    "https://prescripto-ivory.vercel.app", // your main frontend
+    "https://prescripto-tajd.vercel.app"   // your admin panel
+  ],
   credentials: true
 }));
+
 
 
 // api endpoints
