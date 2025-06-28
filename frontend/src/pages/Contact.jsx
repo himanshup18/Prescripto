@@ -3,6 +3,8 @@ import { assets } from '../assets/assets';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -21,8 +23,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      // Replace with your backend endpoint
-      const res = await axios.post('http://localhost:4000/api/contact', formData);
+      const res = await axios.post(`${backendUrl}/api/contact`, formData);
       if (res.data.success) {
         toast.success('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
