@@ -18,7 +18,9 @@ app.use(express.json());
 app.use(cors({
   origin: [
     "https://prescripto-ivory.vercel.app", // your main frontend
-    "https://prescripto-tajd.vercel.app"   // your admin panel
+    "https://prescripto-tajd.vercel.app",   // your admin panel
+    "https://prescripto-42us.vercel.app/",
+    "https://prescripto-zk4r.vercel.app/"  //admin
   ],
   credentials: true
 }));
