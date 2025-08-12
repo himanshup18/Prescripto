@@ -24,14 +24,14 @@ Prescripto is a full-stack doctor appointment booking platform with **user authe
 
 ## 📸 Screenshots
 
-### **User Dashboard**
-![User Dashboard](screenshots/user_dashboard.png)
+### **Home**
+![Home](Home.png)
 
 ### **Book Appointment**
-![Book Appointment](screenshots/book_appointment.png)
+![Book Appointment](BookAppointment.png)
 
-### **Admin Dashboard**
-![Admin Dashboard](screenshots/admin_dashboard.png)
+### **All Doctors**
+![All Doctors](Doctors.png)
 
 *(Replace the above paths with your uploaded screenshot paths — for example, `![User Dashboard](https://i.imgur.com/yourimage.png)` if hosted online.)*
 
