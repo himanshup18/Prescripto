@@ -62,7 +62,7 @@ npm install
 🔑 Environment Variables
 Create a .env file in both the frontend and backend directories.
 
-Backend .env
+#Backend .env
 
 CLOUDINARY_NAME=xxxxxx
 CLOUDINARY_API_KEY=xxxxx
@@ -83,7 +83,7 @@ RAZORPAY_KEY_ID=xxxxx
 RAZORPAY_KEY_SECRET=xxxx
 CURRENCY=xxx
 
-Frontend .env
+#Frontend .env
 
 VITE_BACKEND_URL=xxxxx
 VITE_RAZORPAY_KEY_ID=xxxxx
