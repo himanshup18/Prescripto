@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
 const doctorSchema = new mongoose.Schema({
+    docId: { type: String, required: true, default: () => "DOC" + Date.now() + Math.floor(Math.random() * 1000000), unique: true }, // ✅ Added this line
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true },
@@ -14,7 +15,7 @@ const doctorSchema = new mongoose.Schema({
     slots_booked: { type: Object, default: {} },
     address: { type: Object, required: true },
     date: { type: Number, required: true },
-}, { minimize: false })
+}, { minimize: false });
 
 const doctorModel = mongoose.models.doctor || mongoose.model("doctor", doctorSchema);
 export default doctorModel;

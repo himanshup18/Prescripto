@@ -20,7 +20,9 @@ app.use(cors({
     "https://prescripto-ivory.vercel.app", // your main frontend
     "https://prescripto-tajd.vercel.app",   // your admin panel
     "https://prescripto-42us.vercel.app",
-    "https://prescripto-zk4r.vercel.app"  //admin
+    "https://prescripto-zk4r.vercel.app",  //admin
+    "http://localhost:5173",
+    "http://localhost:5174"
   ],
   credentials: true
 }));

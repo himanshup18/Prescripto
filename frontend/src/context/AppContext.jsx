@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import axios from 'axios';
-import { doctors as doctorData } from '../assets/assets'; // 👈 import doctors from your local assets
+// import { doctors as doctorData } from '../assets/assets'; // 👈 import doctors from your local assets
 
 export const AppContext = createContext();
 
@@ -14,15 +14,18 @@ const AppContextProvider = (props) => {
     const [token, setToken] = useState(localStorage.getItem('token') || '');
     const [userData, setUserData] = useState(false);
 
-    // Load doctors from assets (not backend)
-    const getDoctosData = () => {
+ // Load doctors from backend
+    const getDoctosData = async () => {
         try {
-            setDoctors(doctorData);
+            const { data } = await axios.get(backendUrl + '/api/doctor/list');
+            if (data.success) {
+                setDoctors(data.doctors);
+            }
         } catch (error) {
-            console.error("Failed to load doctors from assets:", error);
+            console.error("Failed to load doctors", error);
             toast.error("Failed to load doctors");
         }
-    };
+    }; 
 
     // Get user profile from backend
     const loadUserProfileData = async () => {
