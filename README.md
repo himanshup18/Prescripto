@@ -30,9 +30,6 @@ Prescripto is a full-stack doctor appointment booking platform with **user authe
 ### **Book Appointment**
 ![Book Appointment](BookAppointment.png)
 
-### **All Doctors**
-![All Doctors](Doctors.png)
-
 
 ## 🛠 Tech Stack
 
