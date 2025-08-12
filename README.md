@@ -36,25 +36,11 @@ Prescripto is a full-stack doctor appointment booking platform with **user authe
 
 ## 🛠 Tech Stack
 
-**Frontend:**
-- [React.js](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- **Frontend:** [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), [Tailwind CSS](https://tailwindcss.com/), [React.js](https://react.dev/)  
+- **Backend:** [Node.js](https://nodejs.org/), [Express.js](https://expressjs.com/)  
+- **Database:** [MongoDB](https://www.mongodb.com/), [Mongoose](https://mongoosejs.com/)  
+- **Authentication & Security:** [JWT](https://jwt.io/), [Bcrypt](https://github.com/kelektiv/node.bcrypt.js/)
 
-**Backend:**
-- [Node.js](https://nodejs.org/)
-- [Express.js](https://expressjs.com/)
-- [Socket.io](https://socket.io/)
-
-**Database:**
-- [MongoDB](https://www.mongodb.com/)
-
-**Other Integrations:**
-- [Cloudinary](https://cloudinary.com/) for file uploads
-- [Razorpay](https://razorpay.com/) & [Stripe](https://stripe.com/) for payments
-- [Nodemailer](https://nodemailer.com/) for emails
-- [JWT](https://jwt.io/) for authentication
-
----
 
 ## ⚙️ Installation & Setup
 
