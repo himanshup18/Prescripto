@@ -67,17 +67,11 @@ Create a .env file in both the frontend and backend directories.
 CLOUDINARY_NAME=xxxxxx
 CLOUDINARY_API_KEY=xxxxx
 CLOUDINARY_SECRET_KEY=xxxx
-
 MONGODB_URI=xxxx
 PORT=xxxx
-
 ADMIN_EMAIL=xxxxx
 ADMIN_PASSWORD=xxxxx
-
 JWT_SECRET= xxxxx
-
-
-# STRIPE_API_KEY=xxxxx
 STRIPE_SECRET_KEY=xxxxxx
 RAZORPAY_KEY_ID=xxxxx
 RAZORPAY_KEY_SECRET=xxxx
