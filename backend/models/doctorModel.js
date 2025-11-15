@@ -17,5 +17,7 @@ const doctorSchema = new mongoose.Schema({
     date: { type: Number, required: true },
 }, { minimize: false });
 
+// Check if the model already exists to avoid OverwriteModelError
 const doctorModel = mongoose.models.doctor || mongoose.model("doctor", doctorSchema);
+
 export default doctorModel;

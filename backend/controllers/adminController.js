@@ -12,10 +12,10 @@ const loginAdmin = async (req, res) => {
     const { email, password } = req.body;
 
     // Debug logs (remove or comment out in production)
-    console.log("ADMIN EMAIL (ENV):", process.env.ADMIN_EMAIL);
-    console.log("ADMIN PASSWORD (ENV):", process.env.ADMIN_PASSWORD);
-    console.log("EMAIL ENTERED:", email);
-    console.log("PASSWORD ENTERED:", password);
+    // console.log("ADMIN EMAIL (ENV):", process.env.ADMIN_EMAIL);
+    // console.log("ADMIN PASSWORD (ENV):", process.env.ADMIN_PASSWORD);
+    // console.log("EMAIL ENTERED:", email);
+    // console.log("PASSWORD ENTERED:", password);
 
     // Compare with ENV credentials
     if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {

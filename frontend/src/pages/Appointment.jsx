@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react'; 
+import { useNavigate, useParams } from 'react-router-dom'; 
 import { AppContext } from '../context/AppContext';
 import { assets } from '../assets/assets';
 import RelatedDoctors from '../components/RelatedDoctors';
@@ -7,17 +7,19 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const Appointment = () => {
-    const { docId } = useParams();
-    const { doctors, currencySymbol, backendUrl, token, getDoctosData } = useContext(AppContext);
+    
+    const { docId } = useParams();// Getting doctor ID from URL
+
+    const { doctors, currencySymbol, backendUrl, token, getDoctosData } = useContext(AppContext); // Using context to get global state
     const daysOfWeek = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
 
-    const [docInfo, setDocInfo] = useState(null);
-    const [docSlots, setDocSlots] = useState([]);
-    const [slotIndex, setSlotIndex] = useState(0);
-    const [slotTime, setSlotTime] = useState('');
+    const [docInfo, setDocInfo] = useState(null); // State to hold doctor information
+    const [docSlots, setDocSlots] = useState([]); // State to hold available slots
+    const [slotIndex, setSlotIndex] = useState(0); // State to hold selected day index
+    const [slotTime, setSlotTime] = useState(''); // State to hold selected time slot
 
     const navigate = useNavigate();
-
+    // Function to fetch doctor information based on docId
     const fetchDocInfo = () => {
         const doc = doctors.find((doc) => doc._id === docId);
         setDocInfo(doc);
@@ -25,7 +27,7 @@ const Appointment = () => {
 
     const getAvailableSolts = async () => {
         setDocSlots([]);
-
+        
         const today = new Date();
 
         let updatedSlots = [];

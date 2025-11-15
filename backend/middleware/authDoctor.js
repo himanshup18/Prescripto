@@ -8,8 +8,8 @@ const authDoctor = async (req, res, next) => {
     }
     try {
         const token_decode = jwt.verify(dtoken, process.env.JWT_SECRET)
-        req.body.docId = token_decode.id
-        next()
+        req.body.docId = token_decode.id // Add docId to req.body for further use in controllers
+        next() // Proceed to the next middleware or route handler
     } catch (error) {
         console.log(error)
         res.json({ success: false, message: error.message })

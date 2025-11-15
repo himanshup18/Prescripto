@@ -1,4 +1,4 @@
-import multer from "multer";
+import multer from "multer"; //Node.js middleware used to handle file uploads (images, PDFs, videos, etc.) in Express applications.
 
 const storage = multer.diskStorage({
     filename: function (req, file, callback) {

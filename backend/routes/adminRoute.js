@@ -1,16 +1,9 @@
 import express from "express";
-import {
-  loginAdmin,
-  appointmentsAdmin,
-  appointmentCancel,
-  addDoctor,
-  allDoctors,
-  adminDashboard
-} from "../controllers/adminController.js";
+import { loginAdmin, appointmentsAdmin, appointmentCancel, addDoctor, allDoctors, adminDashboard} from "../controllers/adminController.js";
 import authAdmin from "../middleware/authAdmin.js";
-import upload from "../middleware/multer.js"; // your multer config for file uploads
+import upload from "../middleware/multer.js";
 
-const adminRouter = express.Router();
+const adminRouter = express.Router(); //creates a new router object to handle admin-related routes
 
 adminRouter.post("/login", loginAdmin);
 adminRouter.post("/add-doctor", authAdmin, upload.single("image"), addDoctor);

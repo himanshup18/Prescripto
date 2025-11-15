@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+import jwt from "jsonwebtoken"; //import the jsonwebtoken library for handling JWTs
 
 // Admin authentication middleware
 const authAdmin = async (req, res, next) => {

@@ -17,8 +17,11 @@ import Verify from './pages/Verify'
 const App = () => {
   return (
     <div className='mx-4 sm:mx-[10%]'>
+      
       <ToastContainer />
+
       <Navbar />
+
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/doctors' element={<Doctors />} />
@@ -31,7 +34,9 @@ const App = () => {
         <Route path='/my-profile' element={<MyProfile />} />
         <Route path='/verify' element={<Verify />} />
       </Routes>
+
       <Footer />
+
     </div>
   )
 }

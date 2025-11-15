@@ -2,7 +2,8 @@ import express from 'express';
 import { loginDoctor, appointmentsDoctor, appointmentCancel, doctorList, changeAvailablity, appointmentComplete, doctorDashboard, doctorProfile, updateDoctorProfile } from '../controllers/doctorController.js';
 import authDoctor from '../middleware/authDoctor.js';
 import authAdmin from '../middleware/authAdmin.js';
-const doctorRouter = express.Router();
+
+const doctorRouter = express.Router(); //creates a new router object to handle doctor-related routes
 
 doctorRouter.post("/login", loginDoctor)
 doctorRouter.post("/cancel-appointment", authDoctor, appointmentCancel)

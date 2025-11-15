@@ -14,5 +14,7 @@ const appointmentSchema = new mongoose.Schema({
     isCompleted: { type: Boolean, default: false }
 })
 
+// Check if the model already exists to avoid OverwriteModelError
 const appointmentModel = mongoose.models.appointment || mongoose.model("appointment", appointmentSchema)
+
 export default appointmentModel
